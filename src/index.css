@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.App {
+  background: linear-gradient(
+    to right top,
+    #051937,
+    #004d7a,
+    #008793,
+    #00bf72,
+    #a8eb12
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  text-align: center;
+}
+
+h1 {
+  padding-top: 10px;
+}
+
+h2 {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  width: 350px;
+  height: 350px;
+  margin: 0 auto;
+  gap: 10px;
+}
+
+@media screen and (min-width:662px) {
+  .cards-container {
+    grid-template-columns: repeat(4, 1fr);
+    width: 400px;
+    height: 400px;
+  }
+}
+
+.card {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.card.down {
+  background: #3bb175;
+}
+
+.card.up {
+  background: #b5f098;
+  pointer-events: none;
+}
+
+.card.selected {
+  background: #ffbf1c;
+  pointer-events: none;
+}
+
+.card.block {
+  pointer-events: none;
+}
+
+.overlay {
+  width: 300px;
+  height: 150px;
+  background: #fff;
+  margin: 0 auto;
+  margin-top: 1rem;
+  padding: 10px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.overlay button {
+  width: 200px;
+  height: 40px;
+  background: #051937;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 6px;
+}
